@@ -8,51 +8,18 @@ This project analyzes a dataset of 100k medical appointments in Brazil, focusing
 
 - What factors predict if a patient will show up for their appointment?
 
-```python
-# Importing libraries and packages...
-import pandas as pd 
-import numpy as np 
-import matplotlib.pyplot as plt 
-import seaborn as sns 
-%matplotlib inline
-```
 
 ## Data Wrangling
 
 Load data, check dimensions, duplicates, missing values, and perform essential cleaning.
 
-```python
-# Load data and check dimensions...
-df = pd.read_csv('no_show_data.csv') 
-df.head()
 
-# Check data size/dimensions...
-df.shape
-
-# Check for duplicates...
-df.duplicated().any()
-
-# Check for duplicate IDs...
-df['PatientId'].duplicated().sum()
-
-# Check for missing values...
-df.info()
-
-# Data Calculations...
-df.describe()
-```
 
 ## Exploratory Data Analysis
 
 Compute statistics and create visualizations to address the primary research question.
 
 ### Overall Dataset Overview
-
-```python
-# Overall look at the entire dataset...
-df.hist(figsize=(16, 7))
-sns.countplot(x=df.NoShow, data=df)
-```
 
 
 ## Conclusions
